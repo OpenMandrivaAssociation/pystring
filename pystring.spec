@@ -4,7 +4,7 @@
 
 Name:		pystring
 Version:	1.1.3
-Release:	%mkrel 1
+Release:	1
 Summary:	Collection of C++ functions emulating Python's string class methods
 Group:		System/Libraries
 License:	BSD
@@ -12,7 +12,6 @@ URL:		https://github.com/imageworks/pystring
 Source0:	https://github.com/imageworks/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
 Patch1:		0001-Add-a-CMake-configuration.patch
 BuildRequires:	cmake
-BuildRequires:	gcc-c++
 
 %description
 Pystring is a collection of C++ functions which match the interface and
@@ -60,13 +59,10 @@ Development files for %{name} library.
 
 %build
 %cmake
-%cmake_build
+%make_build
 
 %install
-%cmake_install
-
-%check
-ctest -C %{_vpath_builddir}
+%make_install -C build
 
 %files -n %{libname}
 %license LICENSE
