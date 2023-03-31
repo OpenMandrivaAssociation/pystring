@@ -4,7 +4,7 @@
 
 Name:		pystring
 Version:	1.1.3
-Release:	1
+Release:	2
 Summary:	Collection of C++ functions emulating Python's string class methods
 Group:		System/Libraries
 License:	BSD
